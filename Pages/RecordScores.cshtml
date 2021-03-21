@@ -1,0 +1,104 @@
+﻿@page
+@model BaistClub.Pages.RecordScoresModel
+@{
+}
+<h2>Record Player Scores</h2>
+
+<p>Update values and click submit for each hole</p>
+<table>
+    <tr>
+        <td>
+            <h6>Hole</h6>
+        </td>
+        <td>
+            <h6>Date</h6>
+        </td>
+        <td>
+            <h6>Time</h6>
+        </td>
+
+        <td>
+            <h6>Par</h6>
+        </td>
+        <td>
+            <h6>Red</h6>
+        </td>
+        <td>
+            <h6>White</h6>
+        </td>
+        <td>
+            <h6>Blue</h6>
+        </td>
+
+        <td>
+            <h6>Stroke Index Men</h6>
+        </td>
+
+        <td>
+            <h6>Stroke Index Women</h6>
+        </td>
+    </tr>
+</table>
+
+@Html.Raw(Model.Msg);
+
+
+
+
+<form method="post">
+    <table>
+
+
+        <tr>
+
+
+            <td>
+
+                <input type="date" asp-for="@Model.HoleNumber" />
+
+            </td>
+            <td>
+                <input type="text" asp-for="@Model.TeeTimeStartDate" />
+            </td>
+            <td>
+                <input type="text" asp-for="@Model.TeeTiemStartTime" />
+
+            </td>
+            <td>
+                <input type="text" asp-for="@Model.Par" />
+
+            </td>
+
+            <td>
+                <input type="text" asp-for="@Model.Red" />
+
+            </td>
+
+            <td>
+                <input type="text" asp-for="@Model.white" />
+
+            </td>
+
+            <td>
+                <input type="text" asp-for="@Model.blue" />
+
+            </td>
+            <td>
+                <input type="text" asp-for="@Model.StrokeIndexMan" />
+
+            </td>
+            <td>
+                <input type="text" asp-for="@Model.StrokeIndexWoman" />
+
+            </td>
+
+
+
+
+
+        </tr>
+
+    </table>
+    <button type="submit">Submit</button>
+</form>
+

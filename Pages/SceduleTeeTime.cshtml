@@ -1,0 +1,40 @@
+﻿@page
+@model BaistClub.Pages.SceduleTeeTimeModel
+@{
+}
+
+<form method="post">
+    <table>
+        <tr>
+
+            <td>
+
+                <p>Requested Start Date</p>
+                <input type="date" asp-for="@Model.RequestedStartDate" />
+            </td>
+            <td>
+                <p>Requested Start time</p>
+                <input type="time" asp-for="@Model.RequestedStartTime" />
+            </td>
+            <td>
+                <p>Additional Member 1</p>
+                <input type="text" asp-for="@Model.MemberID2" />
+            </td>
+            <td>
+                <p>Additional Member 2</p>
+                <input type="text" asp-for="@Model.MemberID3" />
+            </td>
+            <td>
+                <p>Additional Member 3</p>
+                <input type="text" asp-for="@Model.MemberID4" />
+            </td>
+            <td>
+                <p>Number of Golf Carts</p>
+                <input type="text" asp-for="@Model.NumberOfCarts" />
+            </td>
+            <td>
+                <button type="submit"></button>
+            </td>
+        </tr>
+    </table>
+</form>

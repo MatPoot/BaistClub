@@ -1,0 +1,78 @@
+﻿@page
+@model BaistClub.Pages.ApplyForMembershipModel
+@{
+}
+<h3>Register for Club BAIST</h3>
+@Model.Msg
+<form method="post" asp-page="ApplyForMembership">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" asp-for="@Model.Name" /></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" asp-for="@Model.Password" /></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" asp-for="@Model.Address" /></td>
+        </tr>
+        <tr>
+            <td>Postal Code</td>
+            <td><input type="text" asp-for="@Model.PostalCode" /></td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td><input type="text" asp-for="@Model.Phone" /></td>
+        </tr>
+        <tr>
+            <td>Alternate Phone</td>
+            <td><input type="text" asp-for="@Model.AltPhone" /></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" asp-for="@Model.Email" /></td>
+        </tr>
+        <tr>
+            <td>Date Of Birth</td>
+            <td><input type="date" asp-for="@Model.DateOfBirth" /></td>
+        </tr>
+        <tr>
+            <td>Occupation</td>
+            <td><input type="text" asp-for="@Model.Occupation" /></td>
+        </tr>
+        <tr>
+            <td>Company Name</td>
+            <td><input type="text" asp-for="@Model.CompanyName" /></td>
+        </tr>
+        <tr>
+            <td>Company Address</td>
+            <td><input type="text" asp-for="@Model.CompanyAddress" /></td>
+        </tr>
+        <tr>
+            <td>Company Postal Code</td>
+            <td><input type="text" asp-for="@Model.CompanyPostalCode" /></td>
+        </tr>
+        <tr>
+            <td>Company Phone</td>
+            <td><input type="text" asp-for="@Model.CompanyPhone" /></td>
+        </tr>
+        <tr>
+            <td>First Referrer Email</td>
+            <td><input type="text" asp-for="@Model.FirstReferrerEmail" /></td>
+        </tr>
+        <tr>
+            <td>Second Referrer Email</td>
+            <td><input type="text" asp-for="@Model.SecondReferrerEmail" /></td>
+        </tr>
+        
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="submit" /></td>
+        </tr>
+    </table>
+</form>
+
+<p>Applications are processed on a monthly basis.</p>
+<p> Please try logging in after the current calender month is over.</p>

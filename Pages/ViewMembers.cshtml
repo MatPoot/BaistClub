@@ -1,0 +1,108 @@
+﻿@page
+@model BaistClub.Pages.ViewMembersModel
+@{
+}
+<h3>View All Members</h3>
+
+@Html.Raw(Model.Msg);
+
+<table>
+    <tr>
+        <td>
+            <h3>Member ID</h3>
+        </td>
+        <td>
+            <h3>Member Name</h3>
+        </td>
+        <td>
+            <h3>AccountLevel</h3>
+
+        </td>
+        <td>
+            <h3>MemberClass</h3>
+        </td>
+        <td>
+            <h3>MemberPhone</h3>
+        </td>
+        <td>
+            <h3>MemberAddress</h3>
+        </td>
+        <td>
+            <h3>PostalCode</h3>
+        </td>
+        <td>
+            <h3>Date Of Birth</h3>
+        </td>
+        <td>
+            <h3>Date Of Application</h3>
+        </td>
+        <td>
+            <h3>Referrer 1</h3>
+        </td>
+        <td>
+            <h3>Referrer 2</h3>
+        </td>
+
+
+
+
+    </tr>
+</table>
+
+@foreach (var record in @Model.Members)
+{
+
+
+    <table>
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => record.MemberName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => record.MemberID)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => record.AccountLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => record.MemberClass)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => record.MemberPhone)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => record.MemberPhone)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => record.PostalCode)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => record.DOB)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => record.DateOfApplication)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => record.Referrer1)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => record.Referrer2)
+
+            </td>
+
+
+
+        </tr>
+    </table>
+
+}
+}

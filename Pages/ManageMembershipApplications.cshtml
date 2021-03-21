@@ -1,0 +1,73 @@
+﻿@page
+@model BaistClub.Pages.ManageMembershipApplicationsModel
+@{
+}
+<h3>Manage Membership Applications</h3>
+
+
+
+
+    <table>
+        <tr>
+
+            <td>
+              <h3>Member Name</h3>
+            </td>
+            <td>
+                <h3>Referring Email 1</h3>
+
+            </td>
+            <td>
+                <h3>Referring Email 2</h3>
+            </td>
+            <td>
+                <h3>Status Of Application</h3>
+            </td>
+            <td>
+                <h3>Member Name</h3>
+            </td>
+           
+
+        </tr>
+    </table>
+
+    @foreach (var record in @Model.Requesters)
+    {
+
+        <form method="post">
+            <table>
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => record.MemberName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => record.ReferringMemberEmail_1)
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => record.ReferringMemberEmail_2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => record.StatusOfApplication)
+                        <input type="text" asp-for="@Model.UpdateStatus" value="" />
+                    </td>
+                    <td>
+                        <input type="text" asp-for="@Model.EditedApplicantID" value="@Html.Raw(record.MemberID)" hidden />
+                    </td>
+                    <td>
+                        <button type="submit">Update Member</button>
+                    </td>
+
+                </tr>
+            </table>
+        </form>
+    }
+
+
+
+<h4>Membership status codes</h4>
+A - Accepted
+B - Denied
+H - On hold
+W - Waitlisted

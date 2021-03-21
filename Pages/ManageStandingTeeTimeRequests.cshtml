@@ -1,0 +1,103 @@
+﻿@page
+@model BaistClub.Pages.ManageStandingTeeTimeRequestsModel
+@{
+}
+<h3>Manage Standing Requests</h3>
+
+@Html.Raw(Model.Msg);
+
+<table>
+    <tr>
+        <td>
+            <h3>Member ID</h3>
+        </td>
+        
+        <td>
+            <h3>StartDate</h3>
+
+        </td>
+        <td>
+            <h3>EndDate</h3>
+        </td>
+        <td>
+            <h3>Approximate Requested Time</h3>
+        </td>
+
+
+
+    </tr>
+</table>
+
+@foreach (var record in @Model.Requesters)
+{
+
+
+    <table>
+        <tr>
+
+         
+            <td>
+                @Html.DisplayFor(modelItem => record.MemberID)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => record.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => record.EndDate)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => record.TimeTime)
+            </td>
+
+
+        </tr>
+    </table>
+
+}
+
+
+<form method="post">
+    <table>
+        <tr>
+
+            <td>
+
+                <p>Requested Start Date</p>
+                <input type="date" asp-for="@Model.RequestedStartDate" />
+            </td>
+            <td>
+                <p>Requested Start time</p>
+                <input type="time" asp-for="@Model.RequestedStartTime" />
+            </td>
+            <td>
+                <p>Original Member</p>
+                <input type="text" asp-for="@Model.MemberID1" />
+            </td>
+            <td>
+                <p>Additional Member 1</p>
+                <input type="text" asp-for="@Model.MemberID2" />
+            </td>
+            <td>
+                <p>Additional Member 2</p>
+                <input type="text" asp-for="@Model.MemberID3" />
+            </td>
+            <td>
+                <p>Additional Member 3</p>
+                <input type="text" asp-for="@Model.MemberID4" />
+            </td>
+            <td>
+                <p>Number of Golf Carts</p>
+                <input type="text" asp-for="@Model.NumberOfCarts" />
+            </td>
+            <td>
+                <p>EmployeeName</p>
+                <input type="text" asp-for="@Model.EmployeeName" />
+            </td>
+            <td>
+                <button type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>

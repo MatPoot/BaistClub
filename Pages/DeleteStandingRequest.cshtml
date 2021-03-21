@@ -1,0 +1,38 @@
+﻿@page
+@model BaistClub.Pages.DeleteStandingRequestModel
+@{
+}
+@Html.Raw(Model.Msg);
+@foreach (var record in @Model.Requesters)
+{
+
+    <form method="post">
+        <table>
+            <tr>
+
+               
+                <td>
+                    <input type="text" asp-for="ToDeleteTime" hidden value="@Html.Raw(record.TimeTime)" />
+                    <input type="text" asp-for="ToDeleteDate" hidden value="@Html.Raw(record.StartDate)" />
+                    @Html.DisplayFor(modelItem => record.MemberID)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => record.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => record.EndDate)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => record.TimeTime)
+                </td>
+                <td>
+                    <button type="submit">Delete</button>
+                </td>
+
+
+            </tr>
+        </table>
+    </form>
+}
