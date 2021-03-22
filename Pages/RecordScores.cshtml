@@ -9,33 +9,42 @@
     <tr>
         <td>
             <h6>Hole</h6>
+            @Html.ValidationMessageFor(modelItem => modelItem.HoleNumber)
         </td>
         <td>
             <h6>Date</h6>
+            @Html.ValidationMessageFor(modelItem => modelItem.TeeTimeStartDate)
         </td>
         <td>
             <h6>Time</h6>
+            @Html.ValidationMessageFor(modelItem => modelItem.TeeTiemStartTime)
         </td>
 
         <td>
             <h6>Par</h6>
+            @Html.ValidationMessageFor(modelItem => modelItem.Par)
         </td>
         <td>
             <h6>Red</h6>
+            @Html.ValidationMessageFor(modelItem => modelItem.Red)
         </td>
         <td>
             <h6>White</h6>
+            @Html.ValidationMessageFor(modelItem => modelItem.White)
         </td>
         <td>
             <h6>Blue</h6>
+            @Html.ValidationMessageFor(modelItem => modelItem.Blue)
         </td>
 
         <td>
             <h6>Stroke Index Men</h6>
+            @Html.ValidationMessageFor(modelItem => modelItem.StrokeIndexMan)
         </td>
 
         <td>
             <h6>Stroke Index Women</h6>
+            @Html.ValidationMessageFor(modelItem => modelItem.StrokeIndexWoman)
         </td>
     </tr>
 </table>

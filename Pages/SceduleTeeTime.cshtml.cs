@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -14,13 +15,19 @@ namespace BaistClub.Pages
     [BindProperties]
     public class SceduleTeeTimeModel : PageModel
     {
+        [Required]
         public string RequestedStartDate { get; set; }
+        [Required]
         public string RequestedStartTime { get; set; }
-        
+        [Required, MinLength(1), MaxLength(8)]
         public string MemberID1 { get; set; }
+        [Required, MinLength(1), MaxLength(8)]
         public string MemberID2 { get; set; }
+        [ MinLength(1), MaxLength(8)]
         public string MemberID3 { get; set; }
+        [ MinLength(1), MaxLength(8)]
         public string MemberID4 { get; set; }
+        [Required]
 
         public string NumberOfCarts { get; set; }
         

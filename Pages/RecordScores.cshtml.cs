@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -18,20 +19,32 @@ namespace BaistClub.Pages
         public string Msg { get; set; }
 
 
-        
+        [Required]
 
         public string TeeTimeStartDate { get; set; }
+        [Required]
         public string TeeTiemStartTime { get; set; }
+        [Required]
         public string Member1_ID { get; set; }
+        [Required]
         public string HoleNumber { get; set; }
+        
         public string GolfCourse { get; set; }
+        [Required]
         public string CourseRating { get; set; }
+        [Required]
         public string SlopeRating { get; set; }
+        [Required]
         public string Par { get; set; }
+        [Required]
         public string Red { get; set; }
-        public string white { get; set; }
-        public string blue { get; set; }
+        [Required]
+        public string White { get; set; }
+        [Required]
+        public string Blue { get; set; }
+        [Required]
         public string StrokeIndexMan { get; set; }
+        [Required]
         public string StrokeIndexWoman { get; set; }
 
 
@@ -58,8 +71,8 @@ namespace BaistClub.Pages
             SqlParameter TimeSQL = sQLHelper.CreateParameterStringInt("@TeeTimeStartTime", 20, TeeTiemStartTime);
             SqlParameter ParSQL = sQLHelper.CreateParameterStringInt("@Par", 20, Par);
             SqlParameter RedSQL = sQLHelper.CreateParameterStringInt("@Red", 20, Red);
-            SqlParameter WhiteSQL = sQLHelper.CreateParameterStringInt("@White", 20, white);
-            SqlParameter BlueSQL = sQLHelper.CreateParameterStringInt("@Blue", 20, blue);
+            SqlParameter WhiteSQL = sQLHelper.CreateParameterStringInt("@White", 20, White);
+            SqlParameter BlueSQL = sQLHelper.CreateParameterStringInt("@Blue", 20, Blue);
             SqlParameter SIMSQL = sQLHelper.CreateParameterStringInt("@StrokeIndexMen", 20, StrokeIndexMan);
             SqlParameter SIWSQL = sQLHelper.CreateParameterStringInt("@StrokeIndexWomen", 20, StrokeIndexWoman);
 

@@ -9,62 +9,77 @@
         <tr>
             <td>Name</td>
             <td><input type="text" asp-for="@Model.Name" /></td>
+            @Html.ValidationMessageFor(modelItem => modelItem.Name)
         </tr>
         <tr>
             <td>Password</td>
             <td><input type="password" asp-for="@Model.Password" /></td>
+            @Html.ValidationMessageFor(modelItem => modelItem.Password)
         </tr>
         <tr>
             <td>Address</td>
             <td><input type="text" asp-for="@Model.Address" /></td>
+            @Html.ValidationMessageFor(modelItem => modelItem.Name)
         </tr>
         <tr>
             <td>Postal Code</td>
             <td><input type="text" asp-for="@Model.PostalCode" /></td>
+            @Html.ValidationMessageFor(modelItem => modelItem.PostalCode)
         </tr>
         <tr>
             <td>Phone</td>
             <td><input type="text" asp-for="@Model.Phone" /></td>
+            @Html.ValidationMessageFor(modelItem => modelItem.Phone)p
         </tr>
         <tr>
             <td>Alternate Phone</td>
             <td><input type="text" asp-for="@Model.AltPhone" /></td>
+            @Html.ValidationMessageFor(modelItem => modelItem.AltPhone)
         </tr>
         <tr>
             <td>Email</td>
             <td><input type="text" asp-for="@Model.Email" /></td>
+            @Html.ValidationMessageFor(modelItem => modelItem.Email)
         </tr>
         <tr>
             <td>Date Of Birth</td>
             <td><input type="date" asp-for="@Model.DateOfBirth" /></td>
+            @Html.ValidationMessageFor(modelItem => modelItem.DateOfBirth)
         </tr>
         <tr>
             <td>Occupation</td>
             <td><input type="text" asp-for="@Model.Occupation" /></td>
+            @Html.ValidationMessageFor(modelItem => modelItem.Occupation)
         </tr>
         <tr>
             <td>Company Name</td>
             <td><input type="text" asp-for="@Model.CompanyName" /></td>
+            @Html.ValidationMessageFor(modelItem => modelItem.CompanyName)
         </tr>
         <tr>
             <td>Company Address</td>
             <td><input type="text" asp-for="@Model.CompanyAddress" /></td>
+            @Html.ValidationMessageFor(modelItem => modelItem.CompanyAddress)
         </tr>
         <tr>
             <td>Company Postal Code</td>
             <td><input type="text" asp-for="@Model.CompanyPostalCode" /></td>
+            @Html.ValidationMessageFor(modelItem => modelItem.CompanyPostalCode)
         </tr>
         <tr>
             <td>Company Phone</td>
             <td><input type="text" asp-for="@Model.CompanyPhone" /></td>
+            @Html.ValidationMessageFor(modelItem => modelItem.CompanyPhone)
         </tr>
         <tr>
             <td>First Referrer Email</td>
             <td><input type="text" asp-for="@Model.FirstReferrerEmail" /></td>
+            @Html.ValidationMessageFor(modelItem => modelItem.FirstReferrerEmail)
         </tr>
         <tr>
             <td>Second Referrer Email</td>
             <td><input type="text" asp-for="@Model.SecondReferrerEmail" /></td>
+            @Html.ValidationMessageFor(modelItem => modelItem.SecondReferrerEmail)
         </tr>
         
         <tr>

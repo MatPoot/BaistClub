@@ -14,21 +14,30 @@ namespace BaistClub.Pages
     [BindProperties]
     public class ApplyForMembershipModel : PageModel
     {
+        [Required, MinLength(6)]
         public string Name { get; set; }
+        [Required, MinLength(6),MaxLength(50)]
         public string Password { get; set; }
+        [Required, MinLength(6), MaxLength(100)]
         public string Address { get; set; }
+        [Required, MinLength(6), MaxLength(8)]
         public string PostalCode { get; set; }
+        [Required, MinLength(6)]
         public string Phone { get; set; }
+        [MinLength(6)]
         public string AltPhone { get; set; }
+        [Required, MinLength(6), MaxLength(50)]
         public string Email { get; set; }
-        
+        [Required]
         public string DateOfBirth { get; set; }
         public string Occupation { get; set; }
         public string CompanyName { get; set; }
         public string CompanyAddress { get; set; }
         public string CompanyPostalCode { get; set; }
         public string CompanyPhone { get; set; }
+        [Required, MinLength(6), MaxLength(50)]
         public string FirstReferrerEmail { get; set; }
+        [Required, MinLength(6), MaxLength(50)]
         public string SecondReferrerEmail { get; set; }
 
         public string Msg { get; set; }

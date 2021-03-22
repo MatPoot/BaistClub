@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using BaistClub.Classes;
 using System.Data.SqlClient;
 using System.Data;
+using System.ComponentModel.DataAnnotations;
 
 namespace BaistClub.Pages
 {
@@ -17,8 +18,9 @@ namespace BaistClub.Pages
 
         
        
-
+        [Required,MinLength(3),MaxLength(50)]
         public string Email { get; set; }
+        [Required, MinLength(3), MaxLength(50)]
         public string Password { get; set; }
 
         public string Msg { get; set; }
