@@ -14,8 +14,9 @@ namespace BaistClub.Classes
         public SqlConnection ConnectToServer()
         {
             SqlConnection MasterConnection = new SqlConnection();
-            //MasterConnection.ConnectionString = @"Data Source=(Local); Initial Catalog=ABCHardware; Integrated Security=True";
+ 
             MasterConnection.ConnectionString = @"Persist Security Info=False;Integrated Security=True;Database=baistclub;server=(local);";
+            //MasterConnection.ConnectionString = @"Persist Security Info=False;Integrated Security=True;Database=aahmad20;server=(local);";
             MasterConnection.Open();
 
             
@@ -386,7 +387,7 @@ namespace BaistClub.Classes
                     
                     insertItem.StartDate = (DateTime)rdr["TeeTimeStartDate"];
                     
-                    insertItem.TimeTime = (int)rdr["TeaTimeStartTime"];
+                    insertItem.TimeTime = (int)rdr["TeeTimeStartTime"];
 
                     ReturnStringList.Add(insertItem);
                     

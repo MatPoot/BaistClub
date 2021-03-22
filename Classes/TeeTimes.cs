@@ -9,6 +9,7 @@ namespace BaistClub.Classes
     {
         public int MemberID, Member2, Member3, Member4, GolfCarts, TimeTime;
         public DateTime StartDate;
+        public string StringStartDate;
         
         public double timetimemin;
     }

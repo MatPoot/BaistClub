@@ -2,3 +2,45 @@
 @model BaistClub.Pages.ViewTeeTimesModel
 @{
 }
+<h3>View All Tee Times</h3>
+
+@Html.Raw(Model.Msg);
+
+<table>
+    <tr>
+        
+        <td>
+            <h3>Date</h3>
+        </td>
+        <td>
+            <h3>Start Time</h3>
+
+        </td>
+       
+
+
+
+    </tr>
+</table>
+
+@foreach (var record in @Model.TeeTimesList)
+{
+
+
+    <table>
+        <tr>
+            
+           
+            <td>
+                @Html.DisplayFor(modelItem => record.StringStartDate)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => record.TimeTime) : @Html.DisplayFor(modelItem => record.timetimemin)
+            </td>
+           
+
+        </tr>
+    </table>
+
+}
