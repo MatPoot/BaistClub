@@ -15,8 +15,8 @@ namespace BaistClub.Classes
         {
             SqlConnection MasterConnection = new SqlConnection();
  
-            MasterConnection.ConnectionString = @"Persist Security Info=False;Integrated Security=True;Database=baistclub;server=(local);";
-            //MasterConnection.ConnectionString = @"Persist Security Info=False;Integrated Security=True;Database=aahmad20;server=(local);";
+            //MasterConnection.ConnectionString = @"Persist Security Info=False;Integrated Security=True;Database=baistclub;server=(local);";
+            MasterConnection.ConnectionString = @"Persist Security Info=False;Integrated Security=True;Database=aahmad20;server=(local);";
             MasterConnection.Open();
 
             

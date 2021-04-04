@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -14,14 +15,21 @@ namespace BaistClub.Pages
     [BindProperties]
     public class StandingTeeTimeRequestModel : PageModel
     {
+        [Required]
         public string RequestedStartDate { get; set; }
+        [Required]
         public string RequestedEndDate { get; set; }
+        [Required]
         public string RequestedStartTime { get; set; }
-
+        [Required, MinLength(1)]
         public string MemberID1 { get; set; }
+        [Required, MinLength(1)]
         public string MemberID2 { get; set; }
+        [Required, MinLength(1)]
         public string MemberID3 { get; set; }
+        [Required, MinLength(1)]
         public string MemberID4 { get; set; }
+        [Required, MinLength(1)]
 
         public string NumberOfCarts { get; set; }
 

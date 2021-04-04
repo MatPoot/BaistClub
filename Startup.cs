@@ -35,10 +35,12 @@ namespace BaistClub
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
             }
             else
             {
-                app.UseExceptionHandler("/Error");
+                app.UseDeveloperExceptionPage();
+                //app.UseExceptionHandler("/Error");
             }
             app.UseSession(); //added from example
             //app.UseMvc();
