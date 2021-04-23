@@ -8,34 +8,37 @@
 
 
     <table>
+       
+    </table>
+    <table class="table">
         <tr>
 
-            <td>
-              <h3>Member Name</h3>
-            </td>
-            <td>
-                <h3>Referring Email 1</h3>
+            <th>
+                <p>Member Name</p>
+            </th>
+            <th>
+                <p>Referring Email 1</p>
 
-            </td>
-            <td>
-                <h3>Referring Email 2</h3>
-            </td>
-            <td>
-                <h3>Status Of Application</h3>
-            </td>
-            <td>
-                <h3>Member Name</h3>
-            </td>
-           
+            </th>
+            <th>
+                <p>Referring Email 2</p>
+            </th>
+            <th>
+                <p>Status Of Application</p>
+            </th>
+            <th>
+                <p>Member Name</p>
+            </th>
+
 
         </tr>
-    </table>
 
-    @foreach (var record in @Model.Requesters)
-    {
 
-        <form method="post">
-            <table>
+        @foreach (var record in @Model.Requesters)
+        {
+
+            <form method="post">
+
                 <tr>
 
                     <td>
@@ -60,11 +63,11 @@
                     </td>
 
                 </tr>
-            </table>
-        </form>
-    }
 
+            </form>
+        }
 
+    </table>
 
 <h4>Membership status codes</h4>
 A - Accepted

@@ -6,47 +6,47 @@
 
 <p>Update values and click submit for each hole</p>
 <table>
-    <tr>
-        <td>
+    
+        <tr>
             <h6>Hole</h6>
             @Html.ValidationMessageFor(modelItem => modelItem.HoleNumber)
-        </td>
-        <td>
+        </tr>
+        <tr>
             <h6>Date</h6>
             @Html.ValidationMessageFor(modelItem => modelItem.TeeTimeStartDate)
-        </td>
-        <td>
+        </tr>
+        <tr>
             <h6>Time</h6>
             @Html.ValidationMessageFor(modelItem => modelItem.TeeTiemStartTime)
-        </td>
+        </tr>
 
-        <td>
+        <tr>
             <h6>Par</h6>
             @Html.ValidationMessageFor(modelItem => modelItem.Par)
-        </td>
-        <td>
+        </tr>
+        <tr>
             <h6>Red</h6>
             @Html.ValidationMessageFor(modelItem => modelItem.Red)
-        </td>
-        <td>
+        </tr>
+        <tr>
             <h6>White</h6>
             @Html.ValidationMessageFor(modelItem => modelItem.White)
-        </td>
-        <td>
+        </tr>
+        <tr>
             <h6>Blue</h6>
             @Html.ValidationMessageFor(modelItem => modelItem.Blue)
-        </td>
+        </tr>
 
-        <td>
+        <tr>
             <h6>Stroke Index Men</h6>
             @Html.ValidationMessageFor(modelItem => modelItem.StrokeIndexMan)
-        </td>
+        </tr>
 
-        <td>
+        <tr>
             <h6>Stroke Index Women</h6>
             @Html.ValidationMessageFor(modelItem => modelItem.StrokeIndexWoman)
-        </td>
-    </tr>
+        </tr>
+    
 </table>
 
 @Html.Raw(Model.Msg);

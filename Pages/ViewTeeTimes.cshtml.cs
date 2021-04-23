@@ -18,11 +18,13 @@ namespace BaistClub.Pages
         public string LoginID { get; set; }
         public string Msg { get; set; }
         public List<TeeTimes> TeeTimesList { get; set; }
+        
+        public string TeeTimeID { get; set; }
         public void OnGet()
         {
 
             LoginID = HttpContext.Session.GetString("MemberID");
-
+            int LoginIDint = Int32.Parse(LoginID);
             SQLHelper sQLHelper = new SQLHelper();
 
             SqlConnection MasterConnection = sQLHelper.ConnectToServer();
@@ -47,6 +49,24 @@ namespace BaistClub.Pages
                 records.TimeTime = records.TimeTime / 60;
                 
             }
+        }
+        public IActionResult OnPost()
+        {
+            SQLHelper sQLHelper = new SQLHelper();
+
+            SqlConnection MasterConnection = sQLHelper.ConnectToServer();
+
+            SqlCommand CheckIn = new SqlCommand();
+            CheckIn.CommandType = CommandType.StoredProcedure;
+            CheckIn.Connection = MasterConnection;
+            CheckIn.CommandText = "CheckIn";
+
+
+            SqlParameter MainMember = sQLHelper.CreateParameterStringInt("@TeeTimeID", 10, TeeTimeID);
+            SqlParameter[] parameterArray = { MainMember };
+            sQLHelper.ServerCommand(CheckIn, parameterArray);
+            return new RedirectToPageResult("ViewTeeTimes");
+            
         }
     }
 }

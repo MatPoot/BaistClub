@@ -2,45 +2,60 @@
 @model BaistClub.Pages.ViewTeeTimesModel
 @{
 }
-<h3>View All Tee Times</h3>
+<h3>View All Tee Times for Member</h3>
 
-@Html.Raw(Model.Msg);
+@Html.Raw(Model.Msg)
 
-<table>
+
+<table class="table">
     <tr>
-        
-        <td>
+
+        <th>
             <h3>Date</h3>
-        </td>
-        <td>
+        </th>
+        <th>
             <h3>Start Time</h3>
 
-        </td>
-       
+        </th>
+        <th>
+            <h3>CheckIn Status</h3>
+
+        </th>
+
 
 
 
     </tr>
+    @foreach (var record in @Model.TeeTimesList)
+    {
+
+
+
+<tr>
+
+
+    <td>
+        @Html.DisplayFor(modelItem => record.StringStartDate)
+
+    </td>
+    <td>
+
+        @Html.DisplayFor(modelItem => record.TimeTime) : @Html.DisplayFor(modelItem => record.timetimemin)
+    </td>
+    <td>
+
+        @record.CheckStatus;
+    </td>
+    <td>
+        <form method="post">
+            <input type="text" hidden value="@record.TeeTimeID" asp-for="TeeTimeID" />
+            <input type="submit" value="Check In"/>
+        </form>
+
+    </td>
+
+
+</tr>
+
+    }
 </table>
-
-@foreach (var record in @Model.TeeTimesList)
-{
-
-
-    <table>
-        <tr>
-            
-           
-            <td>
-                @Html.DisplayFor(modelItem => record.StringStartDate)
-
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => record.TimeTime) : @Html.DisplayFor(modelItem => record.timetimemin)
-            </td>
-           
-
-        </tr>
-    </table>
-
-}

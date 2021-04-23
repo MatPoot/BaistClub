@@ -7,38 +7,42 @@
 
 
 <table>
-    <tr>
-        <td>
-            <h3>Member ID</h3>
-        </td>
-       
-        <td>
-            <h3>StartDate</h3>
-
-        </td>
-        <td>
-            <h3>StartTime</h3>
-        </td>
-       
-
-
-
-    </tr>
 </table>
 
 
 @foreach (var record in @Model.TeeTimes)
 
 {
-<form method="post">
+<table class="table">
+    <tr>
+        <th>
+            <h3>Member ID</h3>
+        </th>
 
-    <table>
+        <th>
+            <h3>StartDate</h3>
+
+        </th>
+        <th>
+            <h3>StartTime</h3>
+        </th>
+
+
+
+
+    </tr>
+
+    <form method="post">
+
+
         <tr>
-           
-          
+
+
             <td>
-                <input type="text" asp-for="ToDeleteTime" hidden value="@Html.Raw(record.TimeTime)" />
-                <input type="text" asp-for="ToDeleteDate" hidden value="@Html.Raw(record.StartDate)" />
+                <input type="text" asp-for="TeeTimeID" hidden value="@Html.Raw(record.TeeTimeID)" />
+                
+                @*<input type="text" asp-for="ToDeleteTime" hidden value="@Html.Raw(record.TimeTime)" />
+                <input type="text" asp-for="ToDeleteDate" hidden value="@Html.Raw(record.StartDate)" />*@
                 @Html.DisplayFor(modelItem => record.MemberID)
 
             </td>
@@ -49,7 +53,7 @@
                 @Html.DisplayFor(modelItem => record.TimeTime) <p> : </p> @Html.DisplayFor(modelItem => record.timetimemin)
 
             </td>
-           
+
             <td>
                 Delete Record
                 <input type="submit" />
@@ -57,9 +61,8 @@
 
 
         </tr>
-    </table>
-</form>
 
+    </form>
+</table>
 }
 
-}

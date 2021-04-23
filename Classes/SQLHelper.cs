@@ -15,8 +15,8 @@ namespace BaistClub.Classes
         {
             SqlConnection MasterConnection = new SqlConnection();
  
-            //MasterConnection.ConnectionString = @"Persist Security Info=False;Integrated Security=True;Database=baistclub;server=(local);";
-            MasterConnection.ConnectionString = @"Persist Security Info=False;Integrated Security=True;Database=aahmad20;server=(local);";
+            MasterConnection.ConnectionString = @"Persist Security Info=False;Integrated Security=True;Database=baistclub;server=(local);";
+            //MasterConnection.ConnectionString = @"Persist Security Info=False;Integrated Security=True;Database=aahmad20;server=(local);";
             MasterConnection.Open();
 
             
@@ -259,7 +259,7 @@ namespace BaistClub.Classes
                     insertItem.PostalCode = (string)rdr["PostalCode"];
                     insertItem.DOB = (DateTime)rdr["DateOfBirth"];
                     insertItem.DateOfApplication = (DateTime)rdr["DateofApplication"];
-                    insertItem.Referrer1 = (string)rdr["ReferringMemberEmail_2"];
+                    insertItem.Referrer1 = (string)rdr["ReferringMemberEmail_1"];
                     insertItem.Referrer2 = (string)rdr["ReferringMemberEmail_2"];
 
 
@@ -383,11 +383,16 @@ namespace BaistClub.Classes
                 while (rdr.Read())
                 {
                     TeeTimes insertItem = new TeeTimes();
+
+                    insertItem.TeeTimeID = (int)rdr["TeetimeID"];
+
                     insertItem.MemberID = (int)rdr["Member1_ID"];
                     
                     insertItem.StartDate = (DateTime)rdr["TeeTimeStartDate"];
                     
                     insertItem.TimeTime = (int)rdr["TeeTimeStartTime"];
+
+                    insertItem.CheckStatus = (string)rdr["TeeTimeCheckStatus"];
 
                     ReturnStringList.Add(insertItem);
                     

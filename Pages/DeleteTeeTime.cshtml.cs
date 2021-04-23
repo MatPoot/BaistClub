@@ -65,16 +65,16 @@ namespace BaistClub.Pages
             DeleteTeeTimeCommand.Connection = MasterConnection;
             DeleteTeeTimeCommand.CommandText = "DeleteTeeTime";
 
-            SqlParameter ToDeleteDateSQL = sQLHelper.CreateParameterStringInt("@TeeTimeStartDate", 20, ToDeleteDate);
-            SqlParameter ToDeleteTeeTimeSQL = sQLHelper.CreateParameterStringInt("@TeeTimeStartTime", 20, ToDeleteTime);
+            
+            SqlParameter ToDeleteTeeTimeSQL = sQLHelper.CreateParameterStringInt("@TeeTimeID", 10, TeeTimeID);
 
 
 
-            SqlParameter[] parameterArray = {ToDeleteDateSQL,ToDeleteTeeTimeSQL };
+            SqlParameter[] parameterArray = {ToDeleteTeeTimeSQL };
 
             sQLHelper.ServerCommand(DeleteTeeTimeCommand, parameterArray);
 
-            return Page();
+            return new RedirectToPageResult("DeleteTeeTime");
 
         }
     }
